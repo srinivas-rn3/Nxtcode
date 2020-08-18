@@ -1,7 +1,7 @@
 &nbsp;
 
 $outputFile = "C:\CPU-Memory-Ratio.csv"
-$VC = "vCenter Name"
+$VC = "sft041x0005.itci.softwaregrp.net"
 
 ##Connect to the vCenter
 Connect-VIServer $VC -User "test" -Password "test"
