@@ -8,4 +8,5 @@ then
    # Use your favorite mailer here:
    #mailx -s "Server $SERVERIP is down" -t "$NOTIFYEMAIL" < /dev/null 
    echo "Server Online !!!!!!!!!"
+   echo "cool"
 fi
