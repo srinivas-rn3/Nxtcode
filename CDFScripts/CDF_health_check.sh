@@ -24,7 +24,7 @@ echo "Fetching Nodes Status!!!"
 echo "K8's Nodes Status"
 NODES_STATUS=`kubectl get no`
 printf "%-30s|%-18s|%-20s|%-20s|%-20s\n" $NODES_STATUS
-
+echo -e "\n"
 ### Nodes CPU AND Memory Status #####
 
 echo "K8's Nodes Memory and CPU Consumption"
