@@ -20,7 +20,7 @@ MOUNT_LOC="/var/vols/itom"
 
 ###Node Status ###
 
-echo "---------------------- --------------- Nodes Status --------------------------------------------"
+echo "------------------------------------- Nodes Status --------------------------------------------"
 NODES_STATUS=`kubectl get no`
 printf "%-30s|%-18s|%-20s|%-20s|%-20s\n" $NODES_STATUS
 echo -e "\n"
