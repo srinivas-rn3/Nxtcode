@@ -1,0 +1,30 @@
+https://<host>:<port>/rest/<tenantId>/frs/file-list/<fileId>
+
+The <fileId> is obtained from the service request GET API: https://<hostname>:<port>/rest/{{TENANT}}/ems/Request?filter=Id='<RequestId>'&layout=Id,UserOptions,RegisteredForSubscription,Status,RequestAttachments
+
+Look for the RequestAttachments in the response json which will have the Ids of all the attached files, example:
+
+"complexTypeProperties": [{
+"properties": {
+"id": "c5c0e950-bbdf-44b2-ba85-b82364f7e495",
+"file_name": "file1.txt",
+"file_extension": "png",
+"size": 8699,
+"mime_type": "image/png",
+"Creator": "1000008",
+"LastUpdateTime": 1635936440677,
+"IsHidden": false
+}
+}, {
+"properties": {
+"id": "84a22d58-85c2-40cd-bd43-cd34cdbf1a23",
+"file_name": "file2.text",
+"file_extension": "png",
+"size": 26737,
+"mime_type": "image/png",
+"Creator": "1000008",
+"LastUpdateTime": 1635936447641,
+"IsHidden": false
+}
+}]
+#####
