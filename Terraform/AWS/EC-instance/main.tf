@@ -9,12 +9,17 @@ terraform {
   required_version = ">= 0.14.9"
 }
 
+resource "aws_key_pair" "terraform-demo" {
+  key_name   = "terraform-demo"
+  public_key = file("terraform-demo.pub")
+}
+
 provider "aws" {
   profile = "default"
   region  = "us-east-1"
 }
 
-resource "aws_instance" "Terraform Demo" {
+resource "aws_instance" "Terraform_EC2_Creation" {
   ami           = "ami-0831e2fc76f8844e6"
   instance_type = "t2.micro"
   instance_count = var.instance_count
