@@ -1,0 +1,18 @@
+aws rds create-db-instance-read-replica --db-instance-identifier prod-db-1 --source-db-instance-identifier prod-db-1-2021 --multi-az --deletion-protection
+
+
+
+Working 
+aws rds create-db-instance-read-replica --db-instance-identifier prod-db-1-2021 --source-db-instance-identifier prod-db-1 --deletion-protection
+
+Replica promote
+
+aws rds promote-read-replica --db-instance-identifier test-instance-repl 
+
+aws rds promote-read-replica --db-instance-identifier test-instance-repl prod-db-1-2021
+
+aws rds create-db-instance-read-replica --db-instance-identifier prod-db-rr-2021 --source-db-instance-identifier prod-db-1 --deletion-protection --db-subnet-group-name default
+
+With ARN working 
+
+aws rds create-db-instance-read-replica --db-instance-identifier mssql-1-prd-like-rr --source-db-instance-identifier arn:aws:rds:us-east-1:654300604546:db:next-sql --deletion-protection --db-subnet-group-name rds-cap-subnetgroup
