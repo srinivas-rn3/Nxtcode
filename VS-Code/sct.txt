@@ -1,0 +1,142 @@
+CreateProject
+	-name:'AWS_Test22'
+	-directory:'C:\Users\Administrator\AWS Schema Conversion Tool\Projects'
+/
+AddSource
+-name: 'SampleSource'
+-vendor: 'ORACLE'
+-host: 'mforacletest.eastus.cloudapp.azure.com'
+-port: '1521'
+-database: 'mforacle'
+-user: 'nextdb'
+-password: 'Password_1234'
+-useSSL: 'false'
+/
+AddTarget
+-name: 'SampleTarget'
+-vendor: 'POSTGRESQL'
+-host: 'database-glue-test.c43ukqrfsnyx.us-east-1.rds.amazonaws.com'
+-port: '5432'
+-database: 'nextdb'
+-user: 'postgres'
+-password: 'Password_12'
+-useSSL: 'false'
+/
+SaveProject
+/ 
+ConnectSource
+-name: 'SampleSource'
+-vendor: 'ORACLE'
+-host: 'mforacletest.eastus.cloudapp.azure.com'
+-port: '1521'
+-database: 'mforacle'
+-user: 'nextdb'
+-password: 'Password_1234'	
+-requireSSL: 'false' 
+-verifyServerCertificate: 'false'
+-sslAuthentication: 'false'
+/
+ConnectTarget
+-name: 'SampleTarget'
+-vendor: 'POSTGRESQL'
+-host: 'database-glue-test.c43ukqrfsnyx.us-east-1.rds.amazonaws.com'
+-port: '5432'
+-database: 'nextdb'
+-user: 'postgres'
+-password: 'Password_12'
+-requireSSL: 'false' 
+-verifyServerCertificate: 'false'
+-sslAuthentication: 'false'
+/	
+SaveProject
+/
+#########################
+open project 
+#################
+OpenProject
+	-file:'C:\Users\Administrator\AWS Schema Conversion Tool\Projects\AWS_Test4'
+/
+###################
+SCT Command 
+#####################
+
+######################## AWS SCT commands ###################################
+1. Create new project 
+	>java -jar AWSSchemaConversionToolBatch.jar -type scts -script C:\Users\Administrator\Desktop\SCT_Pro\new.scts
+	
+2. Open Project
+	>
+#######################
+	ConnectSource
+	-name: 'SampleSource'
+	-connectionType :'basic_service_name'
+	-serviceName: 'mforacle'
+	-host:  'mforacletest.eastus.cloudapp.azure.com'
+	-port: '1521'
+	-database: 'nextdb'
+	-user: 'nextdb'
+	-password: 'Password_1234'	
+	-requireSSL: 'false' 
+	-verifyServerCertificate: 'false'
+	-sslAuthentication: 'false'
+/
+#################################
+ConnectTarget
+	-name: 'SampleTarget'
+	-host: 'sct-test-pgdb.c43ukqrfsnyx.us-east-1.rds.amazonaws.com'
+	-port: '5432'
+	-database: 'postgres'
+	-user: 'postgres'
+	-password: 'Password_12'
+/	
+######################
+OpenProject
+-file: 'C:\Users\Administrator\AWS Schema Conversion Tool\Projects\AWS_Test10\AWS_Test10.sct'
+/
+##################
+AddServerMapping
+	-sourceNamePath: 'ORACLE.NEXTDB'
+	-targetNamePath: 'POSTGRESQL'
+/
+####################
+LoadSourceTree
+	-sourceName: 'SampleSource'
+	-processMode: 'EXTENDED'
+/
+LoadTargetTree 
+	-targetName: 'SampleTarget'
+	-processMode: 'EXTEND
+/	
+	
+####################
+CreateFilter
+	-name: 'oracleFilter1'
+	-origin: 'source'
+	-objects: '<objectsArray>
+/
+######################
+CreateProject
+	-name:'AWS_Test14'
+	-directory:'C:\Users\Administrator\AWS Schema Conversion Tool\Projects'
+/
+AddSource
+-name: 'SampleSource'
+-vendor: 'ORACLE'
+-host: 'mforacletest.eastus.cloudapp.azure.com'
+-port: '1521'
+-serviceName: 'mforacle'
+-database: 'nextdb'
+-user: 'nextdb'
+-password: 'Password_1234'
+/
+AddTarget
+-name: 'SampleTarget'
+-vendor: 'POSTGRESQL'
+-host: 'database-glue-test.c43ukqrfsnyx.us-east-1.rds.amazonaws.com'
+-port: '5432'
+-database: 'postgres'
+-user: 'postgres'
+-password: 'Password_12'
+/
+SaveProject
+/ 
