@@ -72,7 +72,78 @@ for i in range(n):
     # when code is to added later
 pass
 """
+"""
 #Lambda keyword is used to make inline returning functions with no statements allowed internally. 
 g = lambda x:x*x*x
 print(g(7))    
+""" 
+"""
+import math
+print(math.factorial(5))
+print("using from")
+
+from math import factorial
+
+print(factorial(5))
+""" 
+# initializing number
+"""
+a = 4
+b = 0
+try:
+    k = a//b
+    print(k)
+except ZeroDivisionError:
+    print("Can't Divide by zero")
+finally:
+    print("This always executed!!")
+
+print("The value is a / b is:  ")       
+assert b != 0, "Divide by 0 errro"
+print(a/b)
+"""
+#'del' is used to delete a reference to an object. Any variable or list value can be deleted using del.
+
+from numpy import delete
+
+
+"""
+my_A = 20
+my_B = 'Geek'
+
+print(my_A)
+print(my_B)
+
+# delete both the variables
+
+del my_A ,my_B
+
+print(my_A)
+print(my_B)
+"""
+
+# global variable
+a = 10
+b = 20
+# function to perform addition
+def add():
+    c = a+b
+    print (c)
+# Calling funcation add    
+add()
+   
+def fun():
+    var1 = 10
     
+    def gun():
+        nonlocal var1
+        var1=var1 + 10
+        print(var1)
+    gun()
+fun()
+
+"""
+'global' : This keyword is used to define a variable inside the function to be of a global scope.
+'non-local' : This keyword works similar to the global, but rather than global, this keyword declares 
+              a variable to point to variable of outside enclosing function, in case of nested functions.
+"""
