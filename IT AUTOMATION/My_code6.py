@@ -73,8 +73,41 @@ a ,b = input("Enter two values: ").split()
 print ("The first number is {} and  second number is {}".format(a,b))
 print()
 '''
+'''
 # taking multiple inputs at a time
 # and type casting using list() function
 x = list(map(int, input("Enter the values: ").split()))
 print (x)
+'''
 #https://www.geeksforgeeks.org/taking-multiple-inputs-from-user-in-python/
+# Python program showing
+# how to take multiple input
+# using List comprehension
+'''
+# taking two input at a time
+
+x , y = [int(x) for x in input("Enter the values : ").split()]
+print("first number is : ", x)
+print("Second number is :", y)
+print()
+'''
+'''
+#three input at a time
+x ,y ,z = [int(x) for x in input("Enter the values : ").split()]
+print("first number is : ", x)
+print("Second number is :", y)
+print("Third number is :" , z)
+print()
+'''
+'''
+x , y = [int(x) for x in input("Enter the vlaues: ").split()]
+print("First number is {} and second number is {}".format(x,y))
+print()
+'''
+'''
+# taking multiple inputs at a time
+x = [int(x) for x in input("Enter the values: ").split()]
+print("Number of list is :", x)
+'''
+x = [int(x) for x in input("Enter the values: ").split(",")]
+print("Number of list is :", x)
