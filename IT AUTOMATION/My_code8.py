@@ -152,7 +152,7 @@ lam(a)
 #print((lambda x,y:x + y)(3,4))
 '''
 def fly(x,y):
-    z = (lambda x, y:x ** y)(x,y)
+    z = (lambda x, y : x ** y)(x,y)
     print(z)
     
 fly(1,1)
