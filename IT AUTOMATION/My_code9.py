@@ -140,7 +140,7 @@ obj4 = A("ten")
 print(obj1 + obj2)
 print(obj3+ obj4)
 '''   
-   
+'''
 class B:
     def __init__(self, a, b):
         self.a = a 
@@ -153,8 +153,9 @@ object1 = B(2, 5)
 object2 = B(5, 8)
 object3 = object1 + object2
 print(object3)
-
 '''
+'''
+
 class complex:
     def __init__(self, a, b):
         self.a = a
@@ -170,3 +171,26 @@ Ob3 = Ob1 + Ob2
 print(Ob3)
 '''
 #https://www.geeksforgeeks.org/operator-overloading-in-python/
+
+class I:
+    def __init__(self ,a):
+        self.a = a
+    def __lt__(self, other):
+        if(self.a < other.a):
+            return "ob1 is less than ob2"
+        else:
+            return "ob2 is greater than ob1"
+    def __eq__(self, other):
+        if(self.a == other.a):
+            return "Both are equal"
+        else:
+            return "Not equal"
+ob1 = I(4)
+ob2 = I(3)
+print(ob1 < ob2)
+
+ob3 = I(5)
+ob4 = I(9)
+print(ob3 == ob4)
+
+       
