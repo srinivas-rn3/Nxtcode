@@ -8,4 +8,4 @@ Resources:
     Properties:
       KeyName: 'A4L'
       InstanceType: 't2.micro'
-      ImageId: 'ami-0a8b4cd432b1c3063' 
+      ImageId: 'ami-0a8b4cd432b1c3063'
