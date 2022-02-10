@@ -1,5 +1,11 @@
+
+'''pip install cx-Oracle
+If you are using Python >= 3.6 use the below command in Windows: –
+
+py -m pip install cx-Oracle
+'''
 import cx_Oracle
- 
+
 # Create a table in Oracle database
 try:
  
