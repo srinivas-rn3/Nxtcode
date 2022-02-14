@@ -11,7 +11,7 @@ with open(json_file) as f:
     data = json.load(f)
     #print(data)
 
-#create empty list
+#create empty listjson_file = 'C://Users//rnsri//OneDrive - Micro Focus//DXC Support Project//service_node_CI_Details.json'
 list1 = []
 list2 = []
 for i in data["relations"]:
