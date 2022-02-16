@@ -18,11 +18,11 @@ import pandas as pd
 import time
 #To get date & time
 timert = time.strftime("%Y-%m-%d-%H-%M-%S")
-csv_file_name = 'systemelementcontainsdevice-' + timert +'.csv'
+csv_file_name = 'service_comp_system_element-' + timert +'.csv'
 #print(timert)
 #json file Location
 #json_file = 'C:\\Users\\rnsri\\OneDrive - Micro Focus\\DXC Support Project\\ETL\\today_date_service_json_data.json'
-json_file = 'C:\\Users\\rnsri\\OneDrive - Micro Focus\\DXC Support Project\\ETL\\systemelementcontainsdevice.json'
+json_file = 'C:\\Users\\rnsri\\OneDrive - Micro Focus\\DXC Support Project\\ETL\\service_comp_system_element.json'
 #output/csv file location
 output_csv = 'C:\\Users\\rnsri\\OneDrive - Micro Focus\\DXC Support Project\\ETL\\'+ csv_file_name
  
