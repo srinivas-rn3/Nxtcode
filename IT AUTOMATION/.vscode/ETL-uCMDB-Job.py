@@ -18,18 +18,19 @@ import pandas as pd
 import time
 #To get date & time
 timert = time.strftime("%Y-%m-%d-%H-%M-%S")
-csv_file_name = 'UCMDB-SMAX-ETL-' + timert +'.csv'
-print(timert)
+csv_file_name = 'systemelementcontainsdevice-' + timert +'.csv'
+#print(timert)
 #json file Location
-json_file = 'C:\\Users\\rnsri\\OneDrive - Micro Focus\\DXC Support Project\\ETL\\today_date_service_json_data.json'
+#json_file = 'C:\\Users\\rnsri\\OneDrive - Micro Focus\\DXC Support Project\\ETL\\today_date_service_json_data.json'
+json_file = 'C:\\Users\\rnsri\\OneDrive - Micro Focus\\DXC Support Project\\ETL\\systemelementcontainsdevice.json'
 #output/csv file location
 output_csv = 'C:\\Users\\rnsri\\OneDrive - Micro Focus\\DXC Support Project\\ETL\\'+ csv_file_name
  
 #Exception Handling for file open and Json load
 try:
     #reading json file and loading json data
-    with open (json_file, 'r') as f:
-        data = json.loads(f.read())
+    with open (json_file, 'rb') as f:
+        data = json.loads(f.read()) 
         #print(data)
 except FileNotFoundError:
         print("Sorry, the file "+ json_file + " does not exist.")

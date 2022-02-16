@@ -2,7 +2,7 @@ Resources:
   Bucket:
     Type: 'AWS::S3::Bucket'
     Properties:
-      BucketName : 'accatpics12345678'
+      BucketName : 'catpics12345678'
   Instance:
     Type: 'AWS::EC2::Instance'
     Properties:
