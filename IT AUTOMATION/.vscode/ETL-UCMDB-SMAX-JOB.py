@@ -18,11 +18,17 @@ import pandas as pd
 import time
 #To get date & time
 timert = time.strftime("%Y-%m-%d-%H-%M-%S")
-csv_file_name = 'service_comp_system_element-' + timert +'.csv'
-#print(timert)
-#json file Location
-#json_file = 'C:\\Users\\rnsri\\OneDrive - Micro Focus\\DXC Support Project\\ETL\\today_date_service_json_data.json'
-json_file = 'C:\\Users\\rnsri\\OneDrive - Micro Focus\\DXC Support Project\\ETL\\service_comp_system_element.json'
+#To get arguments and check the arguments
+if len(sys.argv) >= 2:
+    print("No. of arguments is:",str(sys.argv))
+    #Json file path as input
+    json_file = sys.argv[1]
+else :
+     print("No arguments are found, hence exiting the code!!!")
+     sys.exit(2)
+#Final CSV File Name creation
+csv_file_name = 'sercice_component_ETL' + timert +'.csv'
+#json_file = 'C:\\Users\\rnsri\\OneDrive - Micro Focus\\DXC Support Project\\ETL\\service_comp_system_element.json'
 #output/csv file location
 output_csv = 'C:\\Users\\rnsri\\OneDrive - Micro Focus\\DXC Support Project\\ETL\\'+ csv_file_name
  
@@ -38,6 +44,7 @@ except FileNotFoundError:
 except json.decoder.JSONDecodeError:
         print("String could not be converted to JSON")
         sys.exit(1)
+        
 #creating empty lists 
 list1= []; list2 = []; list3 =[]
 #looping to fetch the  json data

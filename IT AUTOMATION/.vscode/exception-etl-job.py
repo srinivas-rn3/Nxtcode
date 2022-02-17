@@ -1,17 +1,18 @@
 '''
 Description : Script fetch the json and extract the 'GlobalId' which matches to 'end1Id' of 'ucmdbID'
               and fetch the 'GlobalId' matches with 'ucmdbID' of end2ID.
-Input : JSON file present in ETL Machine
+Input: JSON file present in ETL Machine
 Output : '.csv' is created in  ETL Machine (Provided the file location)
-Team : MFI.
-Developer E-mail : srinivas.rn2@microfocus.com.
+Team: MFI.
+Developer E-mail: srinivas.rn2@microfocus.com.
 Version : 1.0.
-Script Type : Python.
-Compiler version :  Works with python 3.6 and above.
-Modules Used : JSON,sys,time and pandas (Need to install all mentioned modules before executing).
-File Permission : In Linux/Unix provide the file permission with '755'.
+Script Type: Python.
+Compiler version:  Works with python 3.6 and above.
+Modules Used: JSON, sys, time, and pandas (Need to install all mentioned modules before executing).
+File Permission: In Linux/Unix provide the file permission with '755'.
 
 '''
+
 import json
 import sys
 import pandas as pd
