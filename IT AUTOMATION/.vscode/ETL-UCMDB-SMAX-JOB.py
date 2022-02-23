@@ -31,7 +31,6 @@ csv_file_name = 'sercice_component_ETL' + timert +'.csv'
 #json_file = 'C:\\Users\\rnsri\\OneDrive - Micro Focus\\DXC Support Project\\ETL\\service_comp_system_element.json'
 #output/csv file location
 output_csv = 'C:\\Users\\rnsri\\OneDrive - Micro Focus\\DXC Support Project\\ETL\\'+ csv_file_name
- 
 #Exception Handling for file open and Json load
 try:
     #reading json file and loading json data
@@ -44,7 +43,6 @@ except FileNotFoundError:
 except json.decoder.JSONDecodeError:
         print("String could not be converted to JSON")
         sys.exit(1)
-        
 #creating empty lists 
 list1= []; list2 = []; list3 =[]
 #looping to fetch the  json data

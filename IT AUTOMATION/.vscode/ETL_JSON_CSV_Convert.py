@@ -10,6 +10,6 @@ with open(json_file ,'r') as f:
 nesting_list = pd.json_normalize(data2, record_path=['relations'])
 to_be_dropped = ['ucmdbId','globalId','type','properties','label','attributesQualifiers','displayLabel']
 nesting_list.drop(columns = to_be_dropped, inplace = True)
-#print (nesting_list)    
+#print (nesting_list)
 #nesting_list.to_csv('C://Users//rnsri//OneDrive - Micro Focus//DXC Support Project//ETL//test2.csv',encoding = 'utf-8', index= False)
 nesting_list.to_csv(output_csv,encoding = 'utf-8', index= False)
