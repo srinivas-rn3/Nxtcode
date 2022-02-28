@@ -45,6 +45,7 @@ It does not change or modifies the input variable.
 # A pure function that does Not
 # changes the input list and 
 # returns the new List
+'''
 def pur_fun(List):
     New_list = []
     for i in List:
@@ -57,3 +58,16 @@ modifyied_list = pur_fun(original_list)
 
 print("original list: ",original_list, end = "")
 print("Modifying List :", modifyied_list ,end = "")
+#https://www.geeksforgeeks.org/functional-programming-in-python/
+'''
+from datetime import datetime,date, timedelta
+# Get today's date
+today = date.today().isoformat()
+print("Today is: ", today)
+  
+# Yesterday date
+yesterday = (date.today() - timedelta(1)).isoformat()
+print("Yesterday was: ", yesterday)
+
+monday = (date.today() - timedelta(11)).isoformat()
+print("Last Monday's Date: ", monday)  
