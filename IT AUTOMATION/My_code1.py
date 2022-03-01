@@ -40,7 +40,7 @@ num2 = int(input("Enter the number2 value: "))
 num3 = num1 * num2
 print ("product is:", num3)
 num4 = num1 + num2
-print ("Addtion is:",num4)
+print ("Addition is:",num4)
 """
 """
 # Python program to illustrate
@@ -51,7 +51,7 @@ if(num1<20):
 elif(num1>40):
     print ("num1 is not-valid.......")
 else:
-    print ("num1 is neutral noooo.....")
+    print ("num1 is neutral no......")
 """
 """
 # Python program to illustrate

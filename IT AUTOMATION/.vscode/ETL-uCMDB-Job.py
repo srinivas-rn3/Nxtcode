@@ -18,14 +18,13 @@ import pandas as pd
 import time
 #To get date & time
 timert = time.strftime("%Y-%m-%d-%H-%M-%S")
-csv_file_name = 'service_comp_system_element-' + timert +'.csv'
+csv_file_name = 'servicecompcontainssystemelement-' + timert +'.csv'
 #print(timert)
 #json file Location
 #json_file = 'C:\\Users\\rnsri\\OneDrive - Micro Focus\\DXC Support Project\\ETL\\today_date_service_json_data.json'
-json_file = 'C:\\Users\\rnsri\\OneDrive - Micro Focus\\DXC Support Project\\ETL\\service_comp_system_element.json'
+json_file = 'C:\\Users\\rnsri\\OneDrive - Micro Focus\\DXC Support Project\\ETL\\newData-Json-ETL\\Json_file_0103\\servicecompcontainssystemelement.json'
 #output/csv file location
-output_csv = 'C:\\Users\\rnsri\\OneDrive - Micro Focus\\DXC Support Project\\ETL\\'+ csv_file_name
- 
+output_csv = 'C:\\Users\\rnsri\\OneDrive - Micro Focus\\DXC Support Project\\ETL\\newData-Json-ETL\\CSV_file_0103\\'+ csv_file_name
 #Exception Handling for file open and Json load
 try:
     #reading json file and loading json data
