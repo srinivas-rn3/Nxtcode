@@ -11,8 +11,7 @@ print (myNumber)
 """
 # List
 
-# Python program to illustrate a list 
-  
+# Python program to illustrate a list
 # creates a empty list
 list1 = []
 # appending data in list
@@ -22,7 +21,7 @@ list1.append("srini")
 
 print (list1)
 """
-""" 
+"""
 # Python program to illustrate
 # getting input from user
 name = input("Enter the name:")
@@ -31,7 +30,7 @@ print ("Hello", name)
 """
 """
 # Python3 program to get input from user
-  
+
 # accepting integer from the user
 # the return type of input() function is string ,
 # so we need to convert the input to integer
@@ -95,6 +94,6 @@ def Main():
      # value of a decimal
     num = math.fabs(num)
     print(num)
-    
+
 if __name__=="__main__":
     Main()
