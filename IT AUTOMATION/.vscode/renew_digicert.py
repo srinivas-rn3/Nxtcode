@@ -64,7 +64,7 @@ payload = {
             "contacts": [
             {
                 "contact_type": "ev_approver",
-                "user_id": 1522870   
+                "user_id": 1522870
             },
             {
                 "contact_type": "technical_contact",

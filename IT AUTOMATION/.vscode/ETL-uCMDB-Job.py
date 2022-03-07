@@ -18,7 +18,7 @@ import pandas as pd
 import time
 #To get date & time
 timert = time.strftime("%Y-%m-%d-%H-%M-%S")
-csv_file_name = 'servicecompcontainssystemelement-' + timert +'.csv'
+csv_file_name = 'servicecompcontainssystemelement_test-' + timert +'.csv'
 #print(timert)
 #json file Location
 #json_file = 'C:\\Users\\rnsri\\OneDrive - Micro Focus\\DXC Support Project\\ETL\\today_date_service_json_data.json'
@@ -72,3 +72,5 @@ except pd.errors.ParserError as e :
     print(e)
     sys.exit(1)
 f.close()
+print("")
+sys.stdout.write(output_csv)
