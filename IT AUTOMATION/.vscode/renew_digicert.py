@@ -22,7 +22,8 @@ comments = "SMAX Ref:"+smaxid+' - '+comment
 common_name = "www.cyberres.com"
 # SAN from SMAX sys.argv[5]
 #san1 = sys.argv[5]
-san1 = "cyberres.com","cyberresilient.com","www.cyberresilient.com"
+#san1 = "cyberres.com","cyberresilient.com","cyberresilient.com"
+san1 = ''
 if san1 == '':
     san1 = common_name
 # CSR from SMAX
@@ -49,9 +50,9 @@ else:
 payload = {
     "certificate": {
         "common_name": common_name,
-        "dns_names": [
+        "dns_names": 
             san1
-        ],
+        ,
         "csr": csr,
         "signature_hash": "sha256",
     },
@@ -89,6 +90,7 @@ headers = {
     'Content-Type': "application/json"
     }
 response = requests.request("POST", url, data=payload_new, headers=headers)
+print (response)
 resp_dict = json.loads(response.text)
 #print(str(resp_dict["id"])+"is the certificate id")
 #print(str(resp_dict['id'])+"is the certificate id")
