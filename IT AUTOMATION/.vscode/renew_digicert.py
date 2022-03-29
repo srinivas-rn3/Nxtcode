@@ -13,29 +13,29 @@ orderid = "126441049"
 #url=securesiteov
 # SMAX ID sys.argv[2]
 #smaxid = sys.argv[2]
-smaxid = "5896553"
+smaxid = "6192572"
 # Comment from SMAX sys.argv[3]
 comment = "renewcerts"
 comments = "SMAX Ref:"+smaxid+' - '+comment
 # Common Name from SMAX sys.argv[4]
 #common_name = sys.argv[4]
-common_name = "www.cyberres.com"
+common_name = "www.voltage.com"
 # SAN from SMAX sys.argv[5]
 #san1 = sys.argv[5]
-#san1 = "cyberres.com","cyberresilient.com","cyberresilient.com"
+san1 = "voltage.com"
 san1 = ''
 if san1 == '':
     san1 = common_name
 # CSR from SMAX
 #csr = 'MIIC+TCCAeECAQAwgYYxCzAJBgNVBAYTAkdCMRIwEAYDVQQIEwlCZXJrc2hpcmUxEDAOBgNVBAcTB05ld2J1cnkxCzAJBgNVBAsTAklUMSYwJAYDVQQKEx1NaWNybyBGb2N1cyBJbnRlcm5hdGlvbmFsIHBsYzEcMBoGA1UEAxMTd3d3LmVhc3RiYXljYWZlLmNvbTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBALwSgqfTpy755SLql+QGnQk67CS510Q+wP8i2w40ncnLHJODaE8zFzw/xyJpItPZYn3Mub9rPbu7H0miDYvVjfikJM1SWQOm1MxEGyEtk17skaedg/y4+XN0335HMNVwfISX25HX4Y6d3cXv/0Kg655utWm4f2gkHG/G0P4RcyBD0f/wOHeNNvQsS48tFJrgotCBQmt7HhY4UkuNXk/xP91pl0eu5O/Yh0SlbShBECL3YgyfYmfwDI338XVdauZbmwgsu1Tq1xrKLN8uSp3C7v9enkNYJXNY55X++pmO+eBpgxOYe9NWsxVeIgQwzTttmJIm0qd9O7cOyQY+9VQ5jCUCAwEAAaAtMCsGCSqGSIb3DQEJDjEeMBwwGgYDVR0RBBMwEYIPZWFzdGJheWNhZmUuY29tMA0GCSqGSIb3DQEBBQUAA4IBAQBywTb6qgPEVMicKAkY5lt+30beWZuSCzl3FUIqMf7fZHrczGD7K24OSDt8zuomgX4JU+18RkCv9V0u2oq8igwWRiLWUkZHYLs1BMl8Hl0sToRItg98h0BRpPztUCm9Dc4ZKvHuoRDLHOhPTV5U22db820oWQPGPfFXa/M+zU/kGmAZhHpIB+1ZKg+SX71bBSkBkyrbNkwW+VgX2dksUDFHuVC8u/nOhOXDuhKOCPiMeq19KJyclhz89E5mzbs2n9KYe7XuTTbpXbXYOo9XtRr6TgsWuh3QXCYn7ZfqtYx7ZU67iXWnSU+0gASsgVtsyOQYn8HmIqvaolIje4sEI79L'
 #csr = sys.argv[6]
-csr = "-----BEGIN NEW CERTIFICATE REQUEST-----MIICuzCCAaMCAQAwdjEZMBcGA1UEAxMQd3d3LmN5YmVycmVzLmNvbTEmMCQGA1UEChMdTWljcm8gRm9jdXMgSW50ZXJuYXRpb25hbCBwbGMxEDAOBgNVBAcTB05ld2J1cnkxEjAQBgNVBAgTCUJlcmtzaGlyZTELMAkGA1UEBhMCR0IwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDSoICXzcuvqH9PM/m2pDU6l1eKzwtC23WnJfddHYVZzqQwalLwql8o2a08JBI9B5BL7u9S6qIpMjUJOeSJZtCcJZB/Sm75mYWva9cBSTjZHDvL/6HbjokpHlGs/vjaS1IOorJ6wdGZf5vdtBuSzicfgbd3e+GYiy8IFj6E+NSEWFiebE3OST3Hvu1DA64toSWvO7K8Eu5RjQKwdnAvU5nYIWe3U3W61jIOiiVAbaFWSqkSh4adPlgVrsH6F3mOjU1kSTbUGHTi5TOD3gTW8YawnW+pqqCxr4xs4X0Is9HdM8mCYoc3n9alQZTtBFuhtfxgEKjCfgLuflATtTSO+4fPAgMBAAGgADANBgkqhkiG9w0BAQsFAAOCAQEAAfYbOrPTY+Q0R3ltLJKVE2nTXEdLtDhPEG3jWf3ORNvJbM/7yxZtzfEQ1u7cXwxe5Rbth26+O3DjJglbCg4dQUBp403yqYuCKAuX5DWG2Mn5nQjvmz3CJGzdfTF/zYpPOgQDiAOE7qFuREfvC3Oxn8Tpw8fXt+ORHWZnqks0U9To0fiN3UHbv9sNQwVovVlK3vge5akuvpaGRlOpBipM271KPAxDwlS/duUM+N/is/ThzOv9+RRx25yaDA1WKR6mici8CN4lK2AbUv+bs6Y6pJUib9h/9r19RYB5ZKyPrDNbr0IJXl6Tle5fI8oZ7ZLoq4WkzbRjZqw4UXHqLRC30A==-----END NEW CERTIFICATE REQUEST-----"
+csr = "-----BEGIN CERTIFICATE REQUEST-----MIIC7jCCAdYCAQAwbzELMAkGA1UEBhMCR0IxETAPBgNVBAgTCEJlcmtzaXJlMRAwDgYDVQQHEwdOZXdidXJ5MSEwHwYDVQQKExhNaWNybyBGb2N1cyAoSVApIExpbWl0ZWQxGDAWBgNVBAMTD3d3dy52b2x0YWdlLmNvbTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAMTtyn5NKgKAnjQg7wy9KAe+W5FFjwylUJqcVes/ugHTy5ugPDx6JhYMRzBupG2wmvTdCI+o+JOTuM+zIeq2eyMtl80VmmoZTHW1/wWoauL9WrhVeuoUZolDD7ETqF/DVy9vxFlJOiri6Qm9YYRahDHHbqlD9VcUX1mUef5LJZ+BfHOXTiT5gs3K2nFrcDGyqOct2i9eiRqnk9LmmUkKs4ZcLj95s30XfvAMIIaSblqXrwdnTJboZoYr3Laec3cVe3BQgrZfZ3Boa7T9sP1gNHCFE7HhdpPzGDUhih8Pmsq5vRSrvrvqHT2RWT8HokJikL3cZzYGoxDSUyaC0Q6+vPkCAwEAAaA6MDgGCSqGSIb3DQEJDjErMCkwJwYDVR0RBCAwHoILdm9sdGFnZS5jb22CD3d3dy52b2x0YWdlLmNvbTANBgkqhkiG9w0BAQsFAAOCAQEAwq2xUGsqnNBFzrSjLT0kBDqHZCzsVcwkcu30LmxXMg4WazlJOLBn6B0GxphuQIh8m9CwvMhxeYLKFFAYMOF/lrPspFXmkoh4HaCenP4U6GU0exMEukeo4Cn111OYmG1CRHPc0S+7BIQKQNhxH5NDMMvuJpxH/otJjxX7b96Q//g2sSdG742Q23FNbLFqBmFc1yNgRzpTlQbQL/EuHOuB2SRECyHwbjn8NZAV0HvPPfGvyN++my5ytH0eBxFKHS91b0O1SAy+XBKQZ4TlD6uD/fs/fBXWaCZlz0eU4/gWgXZ9q/F4u1qHXUA/xx76EeX51NyHNpZE6j+U23RdNdqzXA==-----END CERTIFICATE REQUEST----- "
 # Given Name from SMAX sys.argv[7]
 #given_name = sys.argv[7]
-given_name = "john"
+given_name = "Antonio"
 # Surname/last name from SMAX sys.argv[8]
 #surname = sys.argv[8]
-surname = "Wardle"
+surname = "Macias"
 # Email from SMAX sys.argv[9]
 #email = sys.argv[9]
 email = "John.Wardle@microfocus.com"
