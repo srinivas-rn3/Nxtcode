@@ -97,6 +97,7 @@ class person:
 p = person("Srini")
 p.say_hi()
 '''
+'''
 class details1:
     def __init__(self,full_name,last_name):
         self.full_name = full_name
@@ -109,3 +110,67 @@ myName.person_details()
 print("")
 myname1 = details1("Dani","Lopez")
 myname1.person_details()
+
+#https://www.geeksforgeeks.org/python-classes-and-objects/?ref=lbp
+'''
+'''
+Class and Instance Variables
+Instance variables are for data, unique to each instance and class variables
+are for attributes and methods shared by all instances of the class. 
+Instance variables are variables whose value is assigned inside a constructor or method 
+with self whereas class variables are variables whose value is assigned in the class.
+Defining instance variable using a constructor. 
+'''
+# Python3 program to show that the variables with a value 
+# assigned in the class declaration, are class variables and
+# variables inside methods and constructors are instance
+# variables.
+'''
+#Class Dog
+class Dog:
+    #class variable
+    animal = 'dog'
+    # The init method or constructor
+    def __init__(self,breed, colour):
+        #Instance variable
+        self.breed= breed
+        self.colour = colour
+#object of class 
+Rodger = Dog("Pug","brown")
+Buzo = Dog("Bulldog","black")
+
+print("Rodger details:",end ="\n")
+print("Rodger is a :", Rodger.animal)
+print("Rodger Breed : ", Rodger.breed)
+print("Rodger color :", Rodger.colour)
+print("")
+print("Buzo details:", end="\n")
+print("Buzo is a :", Buzo.animal)
+print("Buzo breed : " ,Buzo.breed)
+print("Buzo color is :",Buzo.colour)
+# Class variables can be accessed using class
+# name also
+print("\nAccessing class variable using class name")
+print(Dog.animal)
+'''
+#Defining instance variable using the normal method.
+
+from turtle import color
+
+
+class Cat:
+    #class variable
+    animal = 'Cat'
+    #The init method or constructor
+    def __init__(self, breed):
+        self.breed = breed
+    # Adds an instance variable 
+    def setColor(self, color):
+        self.color = color
+    def getcolor(self):
+        return self.color
+#Driver Code
+Meenu = Cat("Turkish Angora")
+Meenu.setColor("white")
+print(Meenu.getcolor())
+print(Meenu.animal)
