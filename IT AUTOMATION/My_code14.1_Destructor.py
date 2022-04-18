@@ -79,7 +79,7 @@ class Jedi:
 #obj2 = Jedi("force")
 print("Where you want to join!!!")
 print("type '1' for Dark side & type '2' to join jedi")
-a = int(input ("enter your choice"))
+a = int(input ("enter your choice: "))
 if a == 1:
     print("")
     obj1 = DarthVader("dark")
