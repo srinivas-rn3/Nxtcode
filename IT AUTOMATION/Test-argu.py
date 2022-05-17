@@ -1,3 +1,33 @@
+
+import requests
+import json
+import sys
+
+global common_name
+common_name = sys.argv[1]
+san1 = sys.argv[2].split(',')
+#san1 = "san1.com","san2.com","san3.com"
+csr = sys.argv[3]
+if san1 == '':
+    san1 = common_name
+    print(common_name)
+    payload={
+  "common_name": common_name,
+  "dns_value": common_name
+ }
+    payload_new = json.dumps(payload)
+    print(payload_new)
+else:
+    print(san1)
+    payload={
+  "common_name": common_name,
+  "dns_value": san1,
+  "csr": csr
+ }
+    payload_new = json.dumps(payload)
+    print(payload_new)
+'''
+"""
 import requests
 import json
 import sys
@@ -83,14 +113,38 @@ payload = {
 
 payload_new = json.dumps(payload)
 print(payload_new)
+"""
+"""
+import requests
+import json
+import sys
 
-headers = {
-    'X-DC-DEVKEY': api,
-    'Content-Type': "application/json"
-    }
-response = requests.request("POST", url, data=payload_new, headers=headers)
-print (response)
-resp_dict = json.loads(response.text)
-#print(str(resp_dict["id"])+"is the certificate id")
-#print(str(resp_dict['id'])+"is the certificate id")
-print(response.status_code)
+global common_name
+common_name = sys.argv[1]
+san1 = sys.argv[2]
+
+print (san1)
+'''
+'''
+#san1 = "san1.com","san2.com","san3.com"
+csr = sys.argv[3]
+if san1 == '':
+    san1 = common_name
+    print(common_name)
+    payload={
+  "common_name": common_name,
+  "dns_value": common_name
+ }
+    payload_new = json.dumps(payload)
+    print(payload_new)
+else:
+    print(san1)
+    payload={
+  "common_name": common_name,
+  "dns_value": san1,
+  "csr": csr
+ }
+    payload_new = json.dumps(payload)
+    print(payload_new)
+"""
+'''
