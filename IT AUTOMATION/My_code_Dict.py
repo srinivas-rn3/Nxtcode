@@ -1,11 +1,11 @@
 '''
-Dictionary in Python is an unordered collection of data values, 
-used to store data values like a map, which, unlike other Data 
-Types that hold only a single value as an element, Dictionary holds key:value pair. 
-Key-value is provided in the dictionary to make it more optimized. 
+Dictionary in Python is an unordered collection of data values,
+used to store data values like a map, which, unlike other Data
+Types that hold only a single value as an element, Dictionary holds key:value pair.
+Key-value is provided in the dictionary to make it more optimized.
 '''
 '''
-# Creating a Dictionary 
+# Creating a Dictionary
 # with Integer Keys
 DICT = {1:'Srini',2:'Nova', 3:'Giant'}
 print("\nDictionary with the use od Integer Keys: ")
@@ -195,7 +195,7 @@ Python Dict Comprehension along with items() method
 
 Python items() method along with Dict Comprehension can be used to delete a dictionary in Python.
 
-Python items() method basically takes no arguments and returns an object containing 
+Python items() method basically takes no arguments and returns an object containing
 a list of all the key-value pairs in the particular dictionary.
 
 Syntax:
