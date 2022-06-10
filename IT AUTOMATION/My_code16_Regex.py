@@ -137,7 +137,7 @@ print(re.sub(r'\sAND\s', ' & ', 'Frozen beans AND peas are bout to expire'))
 re.subn() 
 
 subn() is similar to sub() in all ways, except in its way of providing output.
-It returns a tuple with count of the total of replacement and the new string rather than just the string. 
+It returns a tuple with count of the total of replacement and the new string rather than just the string.
 
 Syntax:re.subn(pattern, repl, string, count=0, flags=0)
 '''
