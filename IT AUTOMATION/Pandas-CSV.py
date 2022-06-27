@@ -9,7 +9,6 @@ df1 = pd.DataFrame(df)
 df1= df.fillna('NONE',inplace=True)
 
 #df1.replace(' ',np.nan,regex=True)
-
 #df1 = df['Priority'].replace('MediumPriority','Medium',regex=True)
 df2  = df.replace({'Priority':{'MediumPriority':'Medium','LowPriority':'Low','HighPriority':'High','CriticalPriority':'Critical'}})
 #print(df1)
