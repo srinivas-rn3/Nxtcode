@@ -63,7 +63,8 @@ for i in data["relations"]:
         elif end2Id == ucmdbId:
             list3.append(globalId)
         else:
-            print("UCMDB_ID are not matching!!! ")
+            #print("UCMDB_ID are not matching!!! ")
+            continue
 #print(list1)
 #print(list2)
 #print(list3)
