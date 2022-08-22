@@ -10,23 +10,23 @@ api = 'BUAG35UKW24EWU6CGBICX4JEFNONQUDXRXXLHWE76ZE4KM3CDKVOHFU3EZTK6JZLVBLYP6KN3
 #url = "https://www.digicert.com/services/v2/order/certificate/ssl_securesite_flex"
 
 #email = sys.argv[1]
-email = "anand.david@microfocus.com"
+email = "Vishnu.Priyan@microfocus.com"
 #common_name = sys.argv[2]
-common_name = "mfidmz-houston-adgc.houston.softwaregrp.com"
+common_name = "content.software.microfocus.com"
 #externalcsr = 'MIIDDTCCAfUCAQAwgYoxCzAJBgNVBAYTAkdCMRIwEAYDVQQIEwlCZXJrc2hpcmUxEDAOBgNVBAcTB05ld2J1cnkxCzAJBgNVBAsTAklUMSYwJAYDVQQKEx1NaWNybyBGb2N1cyBJbnRlcm5hdGlvbmFsIHBsYzEgMB4GA1UEAxMXc2VydmVyMS5lYXN0YmF5Y2FmZS5jb20wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDRBsaGEktC/9ruokg8LcBihNOS1/aOpnWEUtQ946wsDlvDO86ClrhUurOE6EDbRTcqEPlAmFOYjqBcEJBeZ1VzH/6xdvcDcNfACLbXCk6i2/sjfodXMAs24UEmuFGFj5XOdl5mc5Fcpztfumg0Ck0aTsuAOSrx8GxN8/DrGKAsiVTTX/NLI3OuagsLOCmhUhcKEhh9cI1E1WQxzwMQcCXhVb5V4e+UeAbcw9wWPpR6DsVP76stEfKzmXkIqWpgRCxr63Z4LhxWXiXI+7XezhEBsdfGgXYUBnDdQsmLVq5+gAsDN3YM7HiKusEe4/5vK8Rl2CsnJpYis/MGwaf3nJlpAgMBAAGgPTA7BgkqhkiG9w0BCQ4xLjAsMCoGA1UdEQQjMCGCH2h0dHBzOi8vc2VydmVyMS5lYXN0YmF5Y2FmZS5jb20wDQYJKoZIhvcNAQEFBQADggEBALFzHY0Ruu0PBEyQIKH72Ze2YED1Hts2kbspraZBRxh6zPe32/O4WdP5o3155jKNTl/YqREbC9x+zFbVYWHpwdagXpWmcTkjlEU8p0/faL3Qyl3QTQ3UNRGFR05OAI6Qqwq14VkLwcUmowMcnTtMeL1Iig/jY4UcNv6Ruc74fTiY39ZuhuISVqwlmFOV/qW6MjP1xt/YYaZlObNaBoKYP80JxsE3IUK3J/7yfA2SOzj5zGeH2oetn/7SSev7ol9aIFOvvBmi88AyllJYyvqpisQbAi6Fy5rlvyqVpYZHGzDjtqhPntB41UvLcQ+xB+XRYCU0VHMYb83cBEip52vdGcE='
 #externalcsr = sys.argv[3]
-externalcsr = "-----BEGIN NEW CERTIFICATE REQUEST-----MIIDmTCCAoECAQAwazELMAkGA1UEBhMCVVMxETAPBgNVBAsTCFNlY3VyaXR5MRMwEQYDVQQKEwpNaWNyb2ZvY3VzMTQwMgYDVQQDEyttZmlkbXotaG91c3Rvbi1hZGdjLmhvdXN0b24uc29mdHdhcmVncnAuY29tMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAuT6i7x9ydOQ8Qa22Bq8iA6pMZ6nWeSzVmuSh4LWzFLQKVKPl/vQLPKHflkLn5rQf+RPO/uoj0ZoxDerJwJCBD++XsAaBqum6FsDEd78m1Lt6azbb1fadym3kTefdRdOuNpokcqZyjg+bZLi/XXFy4JAsQLc4r9QxNoBmX7Aqv7U+PMNo8RseWOGub0KHjCN2JRVEOvFPx383ikIz33t2YYuUGACF6y7f4zL0T8Or/W48aarKN9/69zTuvRMZd64HJsLMIbq5cQ1DAkQeNGrQkfSoBxn5slXTmzMacleJPB0wTY9lHB/gZfE+TrZO095tnefnRcQr92qst+8QynADXQIDAQABoIHoMIHlBgkqhkiG9w0BCQ4xgdcwgdQwgdEGA1UdEQSByTCBxoIgbTR3MDMzMGcuaG91c3Rvbi5zb2Z0d2FyZWdycC5jb22CE200dzAzMzBnLm1maWRtei5uZXSCIG00dzAzMjlnLmhvdXN0b24uc29mdHdhcmVncnAuY29tghNtNHcwMzI5Zy5tZmlkbXoubmV0giltZmlkbXotaG91c3Rvbi1hZC5ob3VzdG9uLnNvZnR3YXJlZ3JwLmNvbYIrbWZpZG16LWhvdXN0b24tYWRnYy5ob3VzdG9uLnNvZnR3YXJlZ3JwLmNvbTANBgkqhkiG9w0BAQUFAAOCAQEAUnPy5g1o6aaIQ3C6p/ccmbxX1rF8AQgpJRLl/LGfbzFPWF+SZowbdWfwBoIHZ5G6ccpsJySxNv1rqmZ/S9eFlF0PcZicvh5vzGS49U80STs/KOo5nH0t6GK6zgaGGTPu/o5AsudgayBCDjXHpsEKFy/Nyt7rn/ud43Fk06egsQXXmfyIs5w9y8/6yAzAoOhG1S/9T1yXrEmkvccZJp1OhXyiUNNql9SO5ujAFCDVRqOeLo+d/78TaZv5Pny6IV1xtEJrpsJPuLNbBeCfEyIigL4hvptISLdshoWvxTR90+xo0Jxo/8GBllEV3Hb+NEfMCivj+Xfbw9Nz49QwLkGEgQ==-----END NEW CERTIFICATE REQUEST-----"
+externalcsr = "-----BEGIN CERTIFICATE REQUEST-----MIIEIjCCAwoCAQAwgZ8xCzAJBgNVBAYTAkdCMRIwEAYDVQQIDAlCZXJrc2hpcmUxEDAOBgNVBAcMB05ld2J1cnkxJjAkBgNVBAoMHU1pY3JvIEZvY3VzIEludGVybmF0aW9uYWwgcGxjMRgwFgYDVQQLDA9PbmxpbmUgQnVzaW5lc3MxKDAmBgNVBAMMH2NvbnRlbnQuc29mdHdhcmUubWljcm9mb2N1cy5jb20wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDH41sDzzaUUo1FYRxVKz76ATnLH8Vyq5PLTKBY4SxvvVv1O4ntJmP5t8pPyPch4Os5WMzJ/oLCYxhj+8FTVHUgBmZIoXIxtbFJi15W/TQ0Rx6F2CVqZ8j3hU28ykoq9l6egQsAW68DNbinrTRB8S2SgAzDLCmf0pOK6m0TkZPRZpK+W/fuxuBX1v5ChzSzvEwMAxICIMPWW2QVBm6bCjREd4tp5NmtVZiGlg1NJ6NUp6fV12oQGL+azYOHGU12MPM13gM/tp0sZc10xaKKI9e99xPHC1TgTxUG6FEGPm3WOidPMO7dGKmRdp1zaQgCn+oK22XJHozuGjEHvbCjB7KlAgMBAAGgggE7MIIBNwYJKoZIhvcNAQkOMYIBKDCCASQwCwYDVR0PBAQDAgQwMBMGA1UdJQQMMAoGCCsGAQUFBwMBMIH/BgNVHREEgfcwgfSCIWRhc2hib2FyZC5zb2Z0d2FyZS5taWNyb2ZvY3VzLmNvbYIgYnVpbGQtbWYuc29mdHdhcmUubWljcm9mb2N1cy5jb22CIHJlZ2lzdHJ5LnNvZnR3YXJlLm1pY3JvZm9jdXMuY29tgiFhcnRpZmFjdHMuc29mdHdhcmUubWljcm9mb2N1cy5jb22CH2NvbnRlbnQuc29mdHdhcmUubWljcm9mb2N1cy5jb22CI2Ntcy1zZXJ2aWNlLnNvZnR3YXJlLm1pY3JvZm9jdXMuY29tgiJ1aS1zZXJ2aWNlLnNvZnR3YXJlLm1pY3JvZm9jdXMuY29tMA0GCSqGSIb3DQEBCwUAA4IBAQATJAzM+jklHsoDk4YLmA1/3GsJVuG8i3AYrhAla87qDZ7pNI7/zGi9f3SG26og58kqc5zFTG/8E/MRn/XzdEh7QzCjNu4j6ccXLOWlMNii3WGXbimiB8A23mXl4jGDkgvq5R3/uaOZykxvWG+CeamDJsqp8UzlFxmcLPI9K9UjxqalucNylIjVSThI16ytmN6BCZNS/2R9XIxpY5lVPdD2NKT/BjmGlsBXnH8hSoriquwoeoerwEnA7DrIou0aOcEHyWSr5KbpLdP8J5k2o/uPCiIXiWBl2hUCFjb7lF8+37HhGDMvElqUNw3vMKiSC28L+iQgu9Jkpxjq+8hxAd+b-----END CERTIFICATE REQUEST-----"
 #given_name = sys.argv[4]
-given_name = "Anand"
+given_name = "Vishnu"
 #surname = sys.argv[5]
-surname = "David"
+surname = "Priyan"
 name = given_name+' '+surname
 #san1 = sys.argv[6]
-san1= "mfidmz-houston-adgc.houston.softwaregrp.com","mfidmz-houston-adgc.houston.softwaregrp.com","mfidmz-houston-ad.houston.softwaregrp.com","m4w0329g.mfidmz.net","m4w0329g.houston.softwaregrp.com","m4w0330g.mfidmz.net","m4w0330g.houston.softwaregrp.com"
+san1= '"dashboard.software.microfocus.com","build-mf.software.microfocus.com","registry.software.microfocus.com","artifacts.software.microfocus.com","content.software.microfocus.com","cms-service.software.microfocus.com","ui-service.software.microfocus.com"'
 if san1 == '':
     san1 = common_name
 #smaxid = sys.argv[7]
-smaxid = "6503320"
+smaxid = "7952334"
 comment = ""
 comments = "SMAX Ref:"+smaxid+' - '+comment
 #External_Cert_Type = "dev"
@@ -77,7 +77,7 @@ headers = {
     'X-DC-DEVKEY': api,
     'Content-Type': "application/json"
     }
-
+'''
 response = requests.request("POST", url, data=payload_new, headers=headers)
 print (response)
 #res = response.text
@@ -86,3 +86,4 @@ resp_dict = json.loads(response.text)
 #print (resp_dict)
 print(str(resp_dict["id"]) + "is the certificate id")
 print(response.status_code)
+'''

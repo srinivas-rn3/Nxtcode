@@ -1,6 +1,6 @@
 '''
-Description : Script fetch the json and extract the 'GlobalId' which matches to 'end1Id' of 'ucmdbID'
-              and fetch the 'GlobalId' matches with 'ucmdbID' of end2ID.
+Description : Script fetch the json and extract the 'UCMDB ID' which matches to 'end1Id'.
+              and compare type 'nt'
 Input : JSON file present in ETL Machine
 Output : '.csv' is created in  ETL Machine (Provided the file location)
 Team : MFI.
@@ -12,10 +12,12 @@ Modules Used : JSON,sys,time and pandas (Need to install all mentioned modules b
 File Permission : In Linux/Unix provide the file permission with '755'.
 
 '''
+import atexit
 import json
 import sys
 import pandas as pd
 import time
+from datetime import timedelta, datetime
 #To get date & time
 timert = time.strftime("%Y-%m-%d-%H-%M-%S")
 #To get arguments and check the arguments
@@ -26,8 +28,9 @@ if len(sys.argv) >= 2:
 else :
      print("No arguments are found, hence exiting the code!!!")
      sys.exit(2)
+start = time.time()
 #Final CSV File Name creation
-csv_file_name = 'sercice_software_ETL' + timert +'.csv'
+csv_file_name = 'service_software_ETL' + timert +'.csv'
 #json_file = 'C:\\Users\\rnsri\\OneDrive - Micro Focus\\DXC Support Project\\ETL\\service_comp_system_element.json'
 #output/csv file location
 output_csv = 'C:\\Users\\rnsri\\Software-ucmdb\\Aug10\\'+ csv_file_name
@@ -77,3 +80,5 @@ except pd.errors.ParserError as e :
     print(e)
     sys.exit(1)
 f.close()
+end = time.time()
+print("The time of execution of above program is :", end-start)
