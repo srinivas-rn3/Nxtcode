@@ -21,10 +21,13 @@ given_name = "Vishnu"
 #surname = sys.argv[5]
 surname = "Priyan"
 name = given_name+' '+surname
-#san1 = sys.argv[6]
-san1= '"dashboard.software.microfocus.com","build-mf.software.microfocus.com","registry.software.microfocus.com","artifacts.software.microfocus.com","content.software.microfocus.com","cms-service.software.microfocus.com","ui-service.software.microfocus.com"'
-if san1 == '':
-    san1 = common_name
+san1 = sys.argv[1]
+#san1= "dashboard.software.microfocus.com","build-mf.software.microfocus.com","registry.software.microfocus.com","artifacts.software.microfocus.com","content.software.microfocus.com","cms-service.software.microfocus.com","ui-service.software.microfocus.com"
+if san1 == '' or san1 == " ":
+     san1 = common_name
+else:
+     san1 = san1.split(',')
+     #print(san1)
 #smaxid = sys.argv[7]
 smaxid = "7952334"
 comment = ""
