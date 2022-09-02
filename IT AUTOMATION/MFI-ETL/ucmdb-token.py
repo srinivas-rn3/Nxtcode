@@ -13,11 +13,14 @@ def ucmdb_token():
     headers = {
     'Content-Type': 'application/json'
     }
+    try:
 
-    response = requests.request("POST", url, headers=headers, data=payload)
-    #token = response.json()
-    response_json = response.text
-    response_json1 = json.loads(response_json)
-    ucmdb_token = response_json1['token']
-    print(ucmdb_token)
+        response = requests.request("POST", url, headers=headers, data=payload)
+        #token = response.json()
+        response_json = response.text
+        response_json1 = json.loads(response_json)
+        ucmdb_token = response_json1['token']
+        print(ucmdb_token)
+    except requests.RequestException as e:
+        print(e)
 ucmdb_token()

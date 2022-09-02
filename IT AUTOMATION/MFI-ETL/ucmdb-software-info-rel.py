@@ -35,4 +35,4 @@ def ucmdb_software_info(tql_json,tql_name):
     end = time.time()
     print("The time of execution of above program is :", end-start)
 #calling function
-ucmdb_software_info("C://Users//rnsri//Software-ucmdb//SEP1//Node_InstalledSoftware_EUC1.json","Node_InstalledSoftware_EUC1")
+ucmdb_software_info("C://Users//rnsri//Software-ucmdb//SEP1//Node_InstalledSoftware_EUC2.json","Node_InstalledSoftware_EUC2")
