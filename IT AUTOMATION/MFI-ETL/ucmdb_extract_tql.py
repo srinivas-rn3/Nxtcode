@@ -13,15 +13,21 @@ def ucmdb_tql(tql):
     headers = {
         'Content-Type': 'application/json',
         'charset': 'UTF-8',
-        'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1bmlxdWVfc2FsdCI6InBvc3RncmVzcWxfY21zX3VjbWRiX2RiIiwiZXhwIjoxNjYyMTA1MjgwLCJyZXBvc2l0b3J5IjoiVUNNREIiLCJjdXN0b21lciI6OTczNTgwMzg4LCJ1c2VybmFtZSI6Im1maXRfcHJvZF92ZXJ0aWNhX2ludHVzZXIifQ.qyyy_u2lHOkUhsINJ4TZ7osLWIUkamIK_ql5AjFE7Ts'
+        'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1bmlxdWVfc2FsdCI6InBvc3RncmVzcWxfY21zX3VjbWRiX2RiIiwiZXhwIjoxNjYyMzk2MDY5LCJyZXBvc2l0b3J5IjoiVUNNREIiLCJjdXN0b21lciI6OTczNTgwMzg4LCJ1c2VybmFtZSI6Im1maXRfcHJvZF92ZXJ0aWNhX2ludHVzZXIifQ.csK3JgEQ1DYPWtAq8--HFAstRqEaZQvBvN9jdTrSvTY'
     }
     try:
         response = requests.request("GET", url, headers=headers, data=payload)
 
-        #print(response.text)
+        status = response.status_code
+        if status == 200:
+            print("OK!")
+            print("status code :" ,status)
+        else :
+            print("Boo!!!")
+            print("status code :" ,status)
         file = open(final_output, "wb")
         file.write(response.content)
         file.close()
     except requests.exceptions.RequestException as e:
         print(e)
-ucmdb_tql("Node_InstalledSoftware_EUC2")
+ucmdb_tql("Node_InstalledSoftware_EUC_adobe")
