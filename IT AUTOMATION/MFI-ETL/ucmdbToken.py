@@ -3,7 +3,7 @@ import json
 import sys 
 
 #creation of the ucmdb token
-def main():
+def token_main():
     url = "https://cms.us2-smax.saas.microfocus.com/ucmdb-server/rest-api/authenticate"
 
     payload = json.dumps({
@@ -22,8 +22,8 @@ def main():
         response_json = response.text
         response_json1 = json.loads(response_json)
         ucmdb_token = response_json1['token']
-        print(ucmdb_token)
+        return ucmdb_token
     except requests.RequestException as e:
         print(e)
 if __name__ == "__main__":
-    main()
+    token_main()
