@@ -34,4 +34,6 @@ def ucmdb_tql(tql):
         file.close()
     except requests.exceptions.RequestException as e:
         print(e)
-ucmdb_tql("InstalledSoftware_Server1")
+#ucmdb_tql("Node_InstalledSoftware_EUC_adobe")
+#ucmdb_tql("Node_InstalledSoftware_EUC_McAfee1")
+ucmdb_tql("InstalledSoftware_EUC_McAfee1")
