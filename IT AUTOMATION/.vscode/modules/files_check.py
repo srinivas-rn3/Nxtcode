@@ -13,6 +13,5 @@ import sys
 #f_out.close()
 with open("C:\\Users\\rnsri\\funny-learn-3.txt","r") as f:
     print(f.read())
-    
 print(f.closed)
 #https://www.youtube.com/watch?v=YgI94IRXySk&ab_channel=codebasics
