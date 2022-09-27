@@ -9,5 +9,3 @@ except TypeError as  e :
     print("Type Error Exception")
     z = None
 print("Divison is: ", z)
-
-
