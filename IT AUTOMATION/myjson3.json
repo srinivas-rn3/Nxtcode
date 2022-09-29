@@ -1,0 +1,98 @@
+[
+  {
+    "baseSteps": [
+      {
+        "overallServerStatus": "error",
+        "startTime": "Thu Mar 19 10:05:39 UTC 2020",
+        "endTime": "Thu Mar 19 10:10:59 UTC 2020"
+      },
+      {
+        "messageInfos": [],
+        "phaseAction": "stage",
+        "unitName": "oainstall.zip(/tmp/oainstall/)",
+        "unitId": "11750001",
+        "startTime": "Thu Mar 19 10:05:49 UTC 2020",
+        "endTime": "Thu Mar 19 10:08:46 UTC 2020",
+        "error": "",
+        "status": "success"
+      },
+      {
+        "output": "",
+        "messageInfos": [],
+        "phaseAction": "install",
+        "unitName": "oainstall.zip(/tmp/oainstall/)",
+        "unitId": "11750001",
+        "startTime": "Thu Mar 19 10:08:53 UTC 2020",
+        "endTime": "Thu Mar 19 10:08:59 UTC 2020",
+        "status": "was_not_installed"
+      },
+      {
+        "phaseAction": "swreg",
+        "error:": "",
+        "scriptName": "swreg",
+        "startTime": "Thu Mar 19 10:10:51 UTC 2020",
+        "endTime": "Thu Mar 19 10:10:59 UTC 2020",
+        "status": "success"
+      },
+      {
+        "phaseAction": "run_compliance",
+        "stdout": "Failed",
+        "error:": "",
+        "scriptName": "app_compliance",
+        "startTime": "Thu Mar 19 10:10:59 UTC 2020",
+        "endTime": "Thu Mar 19 10:10:59 UTC 2020",
+        "stderr": "Server is associated with 1 policies, and 1 items are not installed",
+        "status": "success"
+      }
+    ],
+    "serverId:": 20001
+  },
+  {
+    "baseSteps": [
+      {
+        "overallServerStatus": "error",
+        "startTime": "Thu Mar 19 10:05:39 UTC 2020",
+        "endTime": "Thu Mar 19 10:10:59 UTC 2020"
+      },
+      {
+        "messageInfos": [],
+        "phaseAction": "stage",
+        "unitName": "oainstall.zip(/tmp/oainstall/)",
+        "unitId": "11750001",
+        "startTime": "Thu Mar 19 10:05:49 UTC 2020",
+        "endTime": "Thu Mar 19 10:08:46 UTC 2020",
+        "error": "",
+        "status": "success"
+      },
+      {
+        "output": "",
+        "messageInfos": [],
+        "phaseAction": "install",
+        "unitName": "oainstall.zip(/tmp/oainstall/)",
+        "unitId": "11750001",
+        "startTime": "Thu Mar 19 10:08:53 UTC 2020",
+        "endTime": "Thu Mar 19 10:08:59 UTC 2020",
+        "status": "was_not_installed"
+      },
+      {
+        "phaseAction": "swreg",
+        "error:": "",
+        "scriptName": "swreg",
+        "startTime": "Thu Mar 19 10:10:51 UTC 2020",
+        "endTime": "Thu Mar 19 10:10:59 UTC 2020",
+        "status": "success"
+      },
+      {
+        "phaseAction": "run_compliance",
+        "stdout": "Failed",
+        "error:": "",
+        "scriptName": "app_compliance",
+        "startTime": "Thu Mar 19 10:10:59 UTC 2020",
+        "endTime": "Thu Mar 19 10:10:59 UTC 2020",
+        "stderr": "Server is associated with 1 policies, and 1 items are not installed",
+        "status": "success"
+      }
+    ],
+    "serverId:": 20003
+  }
+]
