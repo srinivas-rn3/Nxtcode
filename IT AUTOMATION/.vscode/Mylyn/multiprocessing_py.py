@@ -41,5 +41,5 @@ if __name__ =='__main__':
     p1 = multiprocessing.Process(target=Calc_square,args=[arr])
     p1.start()
     p1.join()
-    print('result' + str(square_result))
+    print('result=' + str(square_result))
     print("Done!!!")
