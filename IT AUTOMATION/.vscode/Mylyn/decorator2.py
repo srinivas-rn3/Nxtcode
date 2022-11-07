@@ -34,7 +34,6 @@ def daily_backup():
 daily_backup()
 '''
 
-
 from datetime import datetime
 from functools import wraps
 import tracemalloc
@@ -86,5 +85,6 @@ print(make_list2())
 print(make_list3())
 print(make_list4())
 
-
+#Python OOP Tutorial 6: Property Decorators - Getters, Setters, and Deleters
+#https://www.youtube.com/watch?v=jCzT9XFZ5bw
 
