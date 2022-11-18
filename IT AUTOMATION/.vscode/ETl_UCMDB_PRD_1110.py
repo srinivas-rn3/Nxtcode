@@ -10,28 +10,37 @@ Script Type : Python.
 Compiler version :  Works with python 3.6 and above.
 Modules Used : JSON,sys,time and pandas (Need to install all mentioned modules before executing).
 File Permission : In Linux/Unix provide the file permission with '755'.
-
 '''
 import json
 import sys
 import pandas as pd
 import time
+import os
 #To get date & time
-timert = time.strftime("%Y-%m-%d-%H-%M-%S")
+#timert = time.strftime("%Y%m%d%H%M%S")
 #To get arguments and check the arguments
-#if len(sys.argv) >= 2:
-#    print("No. of arguments is:",str(sys.argv))
-#    #Json file path as input
-#json_file = sys.argv[1]
-json_file = r"C:\Users\rnsri\Prod_Business_element_node_1667980862.json"
-#else :
-#     print("No arguments are found, hence exiting the code!!!")
-#     sys.exit(2)
+if len(sys.argv) >= 4:
+    print("No. of arguments is:",str(sys.argv))
+    #Json file path as input
+    json_file = sys.argv[1]
+    csv_file_name1 = sys.argv[2]
+    csv_path = sys.argv[3]
+else :
+     print("No arguments are found, hence exiting the code!!!")
+     sys.exit(2)
+#creation of the driectory for csv
+#dir = '/opt/nfs/UCMDB-SMAX-ETL/etl-output-csv/'
+#filename = timert
+#mode = 0o755
+#path = os.path.join(dir, filename)
+#os.mkdir(path, mode)
 #Final CSV File Name creation
-csv_file_name = 'sercice_component_ETL' + timert +'.csv'
+csv_file_name = csv_file_name1 +'.csv'
 #json_file = 'C:\\Users\\rnsri\\OneDrive - Micro Focus\\DXC Support Project\\ETL\\service_comp_system_element.json'
 #output/csv file location
-output_csv = 'C:\\Users\\rnsri\\OneDrive - Micro Focus\\DXC Support Project\\ETL\\'+ csv_file_name
+#output_csv = '/opt/nfs/UCMDB-SMAX-ETL/etl-output-csv/' + csv_file_name
+output_csv = csv_path +'/'  + csv_file_name
+print ("csv file location :",output_csv)
 #Exception Handling for file open and Json load
 try:
     #reading json file and loading json data
@@ -64,16 +73,49 @@ for i in data["relations"]:
         elif end2Id == ucmdbId:
             list3.append(globalId)
         else:
-            #print("UCMDB_ID are not matching!!! ")
-            continue
-            #print("blahhhhhaaaaaa!!!!")
+            #print("UCMDB_ID are not matching!!!")
+            #added to by pass print statment 21/03
+            pass
 #print(list1)
 #print(list2)
 #print(list3)
 
+# selection of the headers for the csv
+
+
+service = csv_file_name1
+if service == "servicecomponentcontainsdevice":
+    first_index = "device_globalid"
+    second_index = "servicecomponent_globalid"
+    
+elif service == "systemelementcontainsdevice_1":
+    first_index = "systemelement_globalid"
+    second_index = "device_globalid"
+
+elif service == "systemelementcontainsdevice_2":
+    first_index = "systemelement_globalid"
+    second_index = "device_globalid"
+    
+elif service == "servicecomponentcontainssystemelement":
+    first_index = "systemelement_globalid"
+    second_index = "servicecomponent_globalid"
+    
+elif service == "actualservicecontainsservicecomponent":
+    first_index = "servicecomponent_globalid"
+    second_index = "actualservice_globalid"
+
+else:
+    first_index = "device_globalid"
+    second_index = "servicecomponent_globalid"
+    
+print("service Name is :", service)
+print("First Index:" ,first_index, end = " " )
+print("Second Index is :",second_index , end= " ")
+
 #Constructing DataFrame from a dictionary.
 try:
-    df  = pd.DataFrame({'End2Id_GlobalId':list3,'End1_GlobalId':list2})
+    #df  = pd.DataFrame({'device_globalid':list3,'servicecomponent_globalid':list2})
+    df  = pd.DataFrame({first_index :list3, second_index:list2})
     #print(df)
     #Write DataFrame to csv file.
     df.to_csv(output_csv,index=False)

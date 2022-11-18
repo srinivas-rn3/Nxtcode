@@ -81,6 +81,7 @@ for word in my_sentences:
     print(word)
 '''
 #using generator
+'''
 def setn(sentences):
     for word in sentences.split():
         yield word
@@ -91,3 +92,78 @@ print(next(my_sentences))
 print(next(my_sentences))
 print(next(my_sentences))
 print(next(my_sentences))
+'''
+#Python Tutorial: Sorting Lists, Tuples, and Objects
+#https://www.youtube.com/watch?v=D3JvDWO-BY4
+'''
+li = [8,6,0,1,2,66,69,-100,99]
+s_li = sorted(li)
+print("Sorted variable is :\t",s_li)
+#li.sort() #cannot assign to value it gives result 'None'
+print("Orginal List is :\t",li)
+s_li = sorted(li,reverse=True)
+print("reverse List is:\t",s_li)
+'''
+#tuple 
+'''
+tuple = (8,6,0,1,2,66,69,-100,99)
+s_tuple = sorted(tuple)
+print("Tuple:\t",s_tuple)
+'''
+#dict
+'''
+dict = {'name':'Srini','job':'Tech Consultant','age':30,'code':'Python'}
+s_di = sorted(dict)
+print("sorted dict:\t",s_di)
+'''
+'''
+li = [-4,-9,-1,7,1,3]
+s_li = sorted(li)
+print("sorted list:\t",s_li)
+s_li = sorted(li,key=abs)#absolute value of a number
+print("absolute value of a number:\t",s_li)
+'''
+class Employee:
+    def __init__(self,name,age,salary):
+        self.name = name
+        self.age = age
+        self.salary = salary
+    def __repr__(self):
+        return '({},{},${})'.format(self.name,self.age,self.salary)
+
+e1 = Employee('Srini',30,80000)
+e2 = Employee('Muge',26,55000)
+e3 = Employee('Hirbo',32,78800)
+emp_list = [e1,e2,e3]
+'''
+def e_sort_name(emp):
+    return emp.name
+def e_sort_age(emp):
+    return emp.age
+def e_sort_salary(emp):
+    return emp.salary
+
+S_employee = sorted(emp_list,key=e_sort_name)
+print("sorted by name:\t",S_employee)
+S_employee = sorted(emp_list,key=e_sort_age)
+print("Sorted by age:\t",S_employee)
+S_employee = sorted(emp_list,key=e_sort_salary,reverse=True)
+print("Sorted by Salary:\t",S_employee)
+'''
+#above function using lambda
+'''
+S_employee = sorted(emp_list,key=lambda e: e.name)
+print("sorted by name:\t",S_employee)
+S_employee = sorted(emp_list,key=lambda e: e.age)
+print("Sorted by age:\t",S_employee)
+S_employee = sorted(emp_list,key=lambda e: e.salary)
+print("Sorted by Salary:\t",S_employee)
+'''
+#another way of sort
+from operator import attrgetter
+S_employee = sorted(emp_list,key=attrgetter('name'))
+print("sorted by name:\t",S_employee)
+S_employee = sorted(emp_list,key=attrgetter('age'))
+print("Sorted by age:\t",S_employee)
+S_employee = sorted(emp_list,key=attrgetter('salary'))
+print("Sorted by Salary:\t",S_employee)
