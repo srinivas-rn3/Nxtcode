@@ -12,43 +12,45 @@ from openpyxl import Workbook
 
 #PATH = sys.argv[1]
 PATH = r"C:\Users\rnsri\KA-July\TEST_KA_2911"
-#ArticleBaseOnRequest_Path = PATH +r'/ArticleBaseOnRequest.xlsx'
+ArticleBaseOnRequest_Path = PATH +r'/ArticleBaseOnRequest.xlsx'
 #Person_Path = PATH +r'/Person.xlsx'
 #PersonGroup_Path = PATH + r'/PersonGroup.xlsx'
 #Article_Path = PATH +r'/Article.xlsx'
-Request_Path = PATH +r'/Request.xlsx'
+#Request_Path = PATH +r'/Request.xlsx'
+'''
 EXT = "*.zip"
 all_zip_files = [file
                  for path, subdir, files in os.walk(PATH)
                  for file in glob(os.path.join(path, EXT))]
 for x in all_zip_files:
     os.remove(x)
-##############################################Request_ File ##############################################
-EXT5 = "Request_*.csv"
-all_Request_files = [file
+################################################ArticleBaseOnRequest_File################################################
+EXT1 = "ArticleBaseOnRequest_*.csv"
+all_ArticleBaseOnRequest_files = [file
                  for path, subdir, files in os.walk(PATH)
-                 for file in glob(os.path.join(path, EXT5))]
-df_from_Request_file = (pd.read_csv(f, sep=',') for f in all_Request_files)
-df_Request_merged   = pd.concat(df_from_Request_file, ignore_index=True)
-df_Request_merged.drop(df_Request_merged.columns[[0, 1]], axis = 1, inplace = True)
-dict = {'Id':'Request ID','DisplayLabel':'Title','CurrentAssignment':'Current Assignment'}
-df_Request_merged.rename(columns=dict,inplace=True)
-df_Request_merged['Priority']=df_Request_merged['Priority'].replace('MediumPriority','Medium', regex=True)
-df_Request_merged['Priority']=df_Request_merged['Priority'].replace('LowPriority','Low', regex=True)
-df_Request_merged['Priority']=df_Request_merged['Priority'].replace('CriticalPriority','Critical', regex=True)
-df_Request_merged['Priority']=df_Request_merged['Priority'].replace('HighPriority','High', regex=True)
-df_Request_merged['ChatStatus']=df_Request_merged['ChatStatus'].replace('ChatStatusNone','None', regex=True)
-df_Request_merged['ChatStatus']=df_Request_merged['ChatStatus'].replace('ChatStatusAbandoned','Abandoned', regex=True)
-df_Request_merged['ChatStatus']=df_Request_merged['ChatStatus'].replace('ChatStatusPending','Pending', regex=True)
-CreateTime=df_Request_merged['CreateTime']
-CreateTime=pd.to_datetime(CreateTime, unit='ms')#.dt.strftime('%Y/%m/%d')
-df_Request_merged['CreateTime'] = CreateTime
-CloseTime=df_Request_merged['CloseTime']
-CloseTime=pd.to_datetime(CloseTime, unit='ms')#.dt.strftime('%Y/%m/%d')
-df_Request_merged['CloseTime'] = CloseTime
-df=df_Request_merged.to_excel(Request_Path, index=False)
-wb=load_workbook(Request_Path)
+                 for file in glob(os.path.join(path, EXT1))]
+df_from_ArticleBaseOnRequest_file = (pd.read_csv(f, sep=',') for f in all_ArticleBaseOnRequest_files)
+df_ArticleBaseOnRequest_merged   = pd.concat(df_from_ArticleBaseOnRequest_file, ignore_index=True)
+df_ArticleBaseOnRequest_merged.drop(df_ArticleBaseOnRequest_merged.columns[[0, 1]], axis = 1, inplace = True)
+df=df_ArticleBaseOnRequest_merged.to_excel(ArticleBaseOnRequest_Path, index=False)
+df=df_ArticleBaseOnRequest_merged.to_excel(ArticleBaseOnRequest_Path, index=False)
+wb=load_workbook(ArticleBaseOnRequest_Path)
 sheet=wb.active
-for z in all_Request_files:
-    os.remove(z)
-print("Request file is done")
+for y in all_ArticleBaseOnRequest_files:
+    os.remove(y)
+print("ArticleBaseOnRequest is done")
+'''
+#############################################Vlookup for Knowledge Article ID#################################################
+df1 = pd.read_excel(ArticleBaseOnRequest_Path,engine='openpyxl')
+dict = {'firstEntity_Request': 'Request ID','secondEntity_Article': 'Knowledge Article ID'}
+df1.rename(columns=dict,inplace=True)
+#df2=df1.append({'Request ID':'', 'Knowledge Article ID':'#N/A '}, ignore_index=True)
+df2=df1.replace({'Request ID':'', 'Knowledge Article ID':'#N/A '})
+con3 = pd.DataFrame(df2)
+df2 = pd.concat([con3], ignore_index=True)
+df = df1.to_excel(ArticleBaseOnRequest_Path,engine='openpyxl',index=False)
+df1 = pd.read_excel(Request_Path,engine='openpyxl')
+df2 = pd.read_excel(ArticleBaseOnRequest_Path,engine='openpyxl')
+join = pd.merge(df1,df2[['Request ID', 'Knowledge Article ID']],on = 'Request ID' , how = 'left')
+df = join.to_excel(Request_Path,index=False)
+print("vlookup5 is done")
