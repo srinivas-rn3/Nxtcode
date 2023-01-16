@@ -22,4 +22,16 @@
 #print(help(str))
 #print(help(str.upper))
 #Python Tutorial: String Formatting - Advanced Operations for Dicts, Lists, Numbers, and Dates
-#https://www.youtube.com/watch?v=khKv-8q7YmY&ab_channel=CoreySchafer
+#https://www.youtube.com/watch?v=ajrtAuDg3yw&ab_channel=CoreySchafer
+'''
+my_list = [0,1,2,3,4,5,6,7,8,9]
+#          0,1,2,3,4,5,6,7,8,9
+#          -10,-9,-8,-7,-6,-5,-4,-3,-2,-1
+#list[start:end:step]
+#print(my_list[1:8:3])
+print(my_list[::5])
+url_sample ='https://next-think.com'
+print(url_sample[:-7])
+'''
+#https://www.youtube.com/watch?v=3dt4OGnU5sM&ab_channel=CoreySchafer
+#Python Tutorial: Comprehensions - How they work and why you should be using them
