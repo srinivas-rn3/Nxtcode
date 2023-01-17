@@ -35,3 +35,23 @@ print(url_sample[:-7])
 '''
 #https://www.youtube.com/watch?v=3dt4OGnU5sM&ab_channel=CoreySchafer
 #Python Tutorial: Comprehensions - How they work and why you should be using them
+nums = [1,2,3,4,5,6,7,8,9,10]
+#my_list = [] # for loop way
+#for i in nums:
+#    my_list.append(i)
+#print(my_list)
+#Comprehensions way
+#my_list = [n for n in nums]
+#print(my_list)
+#for way
+#my_list = []
+#for i in nums:
+#    my_list.append(i*i)
+#print(my_list)
+##Comprehensions way
+#my_list = [n*n for n in nums]
+#print(my_list)
+#Using lambda + map
+my_list = map(lambda n : n*n, nums)
+print(list(my_list))
+#5:29
