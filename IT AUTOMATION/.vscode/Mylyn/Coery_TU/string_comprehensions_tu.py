@@ -52,6 +52,61 @@ nums = [1,2,3,4,5,6,7,8,9,10]
 #my_list = [n*n for n in nums]
 #print(my_list)
 #Using lambda + map
-my_list = map(lambda n : n*n, nums)
-print(list(my_list))
+#my_list = map(lambda n : n*n, nums)
+#print(list(my_list))
 #5:29
+#my_list = [n for n in nums if n%2 ==0]
+#print(my_list)
+#using filter + lambda 
+#my_list = filter(lambda n:n%2 ==0,nums)
+#print(list(my_list))
+# I want a (letter , num)pair for each letter in 'abcd' and each number in '0123'
+#my_list = []
+#for letter in 'abcd':
+#    for num in range(4):
+#        my_list.append((letter,num))
+#print(my_list)
+#comprehensial
+#my_list = [(letter,num)for letter in 'abcd' for num in range(4)]
+#print(my_list)
+#11:09
+names = ['Bruce','Clark','Peter','Logan','Diana']
+heros = ['Batman','Super Man','Spider Man','Wolverine','Wonder women']
+# I want dict('name','heros') for each name , hero  in zip(names,heros)
+#print1 =zip(heros,names)
+#print(dict(print1))
+'''
+#The dict() function creates a dictionary.
+my_dict = {}
+for name,hero in zip(names,heros):
+    my_dict[name] = hero
+print(my_dict)
+'''
+# using comprehncee
+#my_dict1 = {name: hero for name, hero in zip(heros,names) if hero != 'Spider Man'}
+#print(my_dict1)
+#my_dict = {}
+#for hero,name in zip(heros,names):
+#    if name != 'Peter':
+#        my_dict[name] = hero
+#print(my_dict)
+#13:49
+#sets : unique values
+#nums = [1,2,3,4,4,4,5,5,6,6,7,7,8,9,9,9,0,0,0,]
+#my_set = set()
+#for i in nums:
+#    my_set.add(i)
+#print(my_set)
+#my_set = {i for i in nums}
+#print(my_set)
+#genreator expression
+n = [1,2,3,4,5,6,7,8,9,10,11]
+#def gen_func(n):
+#    for n in nums:
+#        yield n * n
+#my_gen = gen_func(nums)
+#for i in my_gen:
+# print(i)
+my_gen = (n*n for n in n)
+for i in my_gen:
+    print(i)
