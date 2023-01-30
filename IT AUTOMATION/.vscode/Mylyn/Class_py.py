@@ -3,7 +3,7 @@ class Human:
     def __init__(self,n,o):
       self.name = n
       self.occupation = o
-
+x   
     def do_work(self):
         if self.occupation == "tennis player":
             print(self.name,"Plays Tennis")
