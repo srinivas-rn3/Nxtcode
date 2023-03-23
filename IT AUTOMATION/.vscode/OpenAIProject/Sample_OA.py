@@ -6,9 +6,13 @@ import constants as co
 openai.api_key = co.OPENAI_API_KEY
 
 print(openai.api_key)
-response = openai.Completion.create(model="text-davinci-003", 
-                                    prompt="Say this is a test", 
-                                    temperature=0, max_tokens=7)
+response = openai.Completion.create
+(
+  model="text-davinci-003", 
+  prompt="Say this is a test", 
+  temperature=0, 
+  max_tokens=7
+)
 print(response)
 '''
 openai.Completion.create(

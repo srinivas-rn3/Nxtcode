@@ -4,8 +4,8 @@ sys.path.append("C:/Users/srini/git/Nxtcode/IT AUTOMATION/.vscode/OpenAIProject"
 
 import constants
 
+gpt_prompt = input("Enter the your query: ")
 
-gpt_prompt = input('Enter the question you want to ask: ')
 print(gpt_prompt)
 openai.api_key = constants.OPENAI_API_KEY
 #openai.api_key = os.getenv("OPENAI_API_KEY")
