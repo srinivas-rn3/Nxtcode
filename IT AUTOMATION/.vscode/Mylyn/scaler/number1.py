@@ -199,3 +199,4 @@ result = math.floor(myNum)
 print(result)
 '''
 #math.exp():This function takes a number, say x as input and returns ex (exponential of x) .Here e is the Euler’s number having value 2.718282.
+#https://www.scaler.com/topics/python/numbers-in-python/
