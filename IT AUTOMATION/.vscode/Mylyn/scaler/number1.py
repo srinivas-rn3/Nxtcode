@@ -200,3 +200,111 @@ print(result)
 '''
 #math.exp():This function takes a number, say x as input and returns ex (exponential of x) .Here e is the Euler’s number having value 2.718282.
 #https://www.scaler.com/topics/python/numbers-in-python/
+'''
+myNum = 11
+result = math.exp(myNum)
+print("Exponential of {} is {}.".format(myNum,result))
+'''
+'''
+#math.factorial()
+myNum =11 
+result = math.factorial(myNum)
+print("Factroial of {} is{}.".format(myNum,result))
+'''
+'''
+As we know that factorial of a number is defined only for non negative integers,
+if we pass a floating point value as input to the factorial() function, 
+It raises ValueError exception with a message “ValueError: factorial() only accepts integral values”.`
+'''
+'''
+myNum = 11.17
+result1 = math.ceil(myNum)
+print(result1)
+result2 = math.floor(myNum)
+print(result2)
+result = math.factorial(result2)
+print(result)
+result4 = math.factorial(-112)
+print(result4)
+'''
+'''
+#math.gcd()
+result = math.gcd(23,45)
+print("Greatest common divisor of 23 and 45 is {}.".format(result))
+result2 = math.gcd(1.2,22)
+print(result2)
+'''
+'''
+#math.log()
+myNum = 5 
+
+result = math.log(myNum,5)
+#If there is no input given as base, the function calculates the natural log of the input number (with base e).
+result1 = math.log(myNum)
+result2 = math.log(-4)
+print("Log of {} to base 5 is {}.".format(myNum,result))
+print("Log of {} to {}.".format(myNum,result1))
+print(result2)
+'''
+'''
+#math.log10()
+#The log10() function is used to calculate the logarithm of a positive number to the base 10. 
+myNum  = 1172
+result = math.log10(1172)
+print("Log of {} to base 10 is {}.".format(myNum,result))
+#Logarithms are not defined for 0 and negative numbers.
+#myNum2 = -1172
+#print(math.log10(myNum2))
+#math.log2()
+#The log2() function is used to calculate the logarithm of a positive number to the base.
+result1 = math.log2(myNum)
+print("Log of {} to base 2 is {}.".format(myNum,result1))
+#Logarithms are not defined for 0 and negative numbers.
+print(math.log2(-10))
+'''
+'''
+#math.sqrt()
+#The sqrt() function is used to calculate the square root of non negative numbers. 
+myNum = 4
+myNum2 = -4
+result = math.sqrt(myNum)
+result1 = math.sqrt(myNum2)
+print("Square root of {} is {}.".format(myNum,result))
+print("Square root of {} is {}.".format(myNum2,result1))
+'''
+#math.pow()
+#The pow() function is used to calculate power of one number to another
+#result = math.pow(2,3)
+#print("2 raised to power 3 is {}.".format(result))
+'''
+#Trigonometric Functions
+#math.sin():This function takes a number as input and returns its sine.
+myNum = 110 
+
+result1 = math.sin(110)
+print("Sine of {} is {}.".format(myNum,result1))
+#math.tan():This function takes a number as input and returns the tangent of the number.
+result2 = math.tan(110)
+print("Tan of {} is {}.".format(myNum,result2))
+#math.cos():This function takes a number as input and returns its cosine.
+result3 = math.cos(myNum)
+print("Cos of {} is {}.".format(myNum,result3))
+#math.asin():This function takes a number as input and returns its arc sine.
+print("arc sine of ",math.asin(0.5))
+#math.acos():This function takes a number as input and returns its arc cosine.
+print("Arc cosine of ",math.acos(0.5))
+#math.atan():This function takes a number as input and returns the arc tangent of the input number.
+print("Arc tangent of ",math.atan(0.5))
+'''
+'''
+Random Numbers in Python
+If you want to generate random numbers for any use case like OTP generation or many more then you can use the 
+random module in python for generating random numbers. You can import the module using the import statement as follows.
+'''
+import random 
+
+myNum = random.random()
+print("The random number is",myNum)
+#To generate a random integer value, you can use the randint() function.
+myNum2 = random.randint(0,1000)
+print("The random number is", myNum2)
