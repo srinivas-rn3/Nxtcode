@@ -48,13 +48,26 @@
 # print(next(range_))
 # print(next(range_))
 
-x = 10
-gen = (i for i in range(x) if i % 2 == 0)
+# x = 10
+# gen = (i for i in range(x) if i % 2 == 0)
 
-list_ = [i for i in range(x) if i %2 == 0]
+# list_ = [i for i in range(x) if i %2 == 0]
 
-print(gen)
-print(list_)
-for j in gen:
-    print(j)
-    
+# print(gen)
+# print(list_)
+# for j in gen:
+#     print(j)
+
+def infi():
+    n = 0 
+    while True:
+        yield n  
+        n +=1 
+for i in infi():
+    if i%4 == 0:
+        continue
+    elif i  == 13:
+        break
+    else:
+        print(i)
+        
