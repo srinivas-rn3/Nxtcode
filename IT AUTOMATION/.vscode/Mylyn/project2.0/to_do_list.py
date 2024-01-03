@@ -15,9 +15,7 @@ def view_todo_list():
             if tasks:
                 print("To-Do-List:")
                 for index,task in  enumerate(tasks,start=1):
-                    print("\n")
                     print(f"{index}.{task.strip()}",end="\n")
-                    print("\n")
             else:
                 print("To-Do-List is empty!!")
     else:
@@ -61,8 +59,7 @@ def main():
             print("Exiting the to-do-list application.GoodBye!!")
             break
         else:
-            print("Invaid  choice.please enter a number between  1 and 4.")
+            print("Invaid choice.Please enter a number between  1 and 4.")
+
 if __name__ == "__main__":
     main()
-    
-        
