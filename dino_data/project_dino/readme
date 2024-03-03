@@ -1,12 +1,19 @@
-<b>Project on data of dinosaurs</b>
-#################################################
+Project on data of dinosaurs
+#####################################################################################################
 Part 1: Given the csv above, provide the species with the largest average length.
 If a length is not specified for a species, assume it is 1.0m. 
 If a species is not provided, you can ignore the entire row.
 
 Example Output: sanjuanensis
-##################################################################3
+
+Refer to code: find_largest_avg_len.py
+##########################################################################################################
 Part 2: Given the csv above, provide a solution that returns a list of lists of the dinosaur names, where 
 each sub list contains names of dinosaurs that can be made using the same letters.  
 
 Example Output: [[‘allosaurus’, ‘aralosaurus’], ['austrosaurus', 'torosaurus']
+
+Refer to code: get_matching_names
+
+############################################################################################################################
+Importing necessary libraries: pandas, time
