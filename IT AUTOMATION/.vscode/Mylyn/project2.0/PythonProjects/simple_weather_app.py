@@ -21,7 +21,8 @@ def get_weather(api_key,city):
         print(f"Timeout Error:{errt}")
     except requests.exceptions.RequestException as err:
         print(f"Error:{err}")
-    return None 
+    return None
+
 def display_weather(weather_data):
     if weather_data:
         print(f"Weather in {weather_data['name']},{weather_data['sys']['country']}")
@@ -31,6 +32,7 @@ def display_weather(weather_data):
         print(f"Conditions:{weather_data['weather'][0]['description']}")
     else:
         print("Failed to retrieve weather data.")
+        
 def main():
     api_key='47d244805373d83af4de0b0f073b1d73'
     city = input("Enter the city: ")
