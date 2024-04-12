@@ -4,7 +4,7 @@ applied to any function to log its execution time, parameters, and return value.
 You can use the time module to measure execution time and the logging module 
 to log information.
 '''
-import logging,time,sys
+import logging,time,sys,time
 
 ## Configure logging
 log_file_location = r"C:\Users\srini\OneDrive\Documents\app.log"
@@ -23,12 +23,18 @@ def log_function(func):
         result = func(*args,**kwargs)
         end_time = time.time()
         execution_time = end_time - start_time
-        logging.info(f"Function {func.__name__} called with args: {args} and kwargs: {kwargs}.Execution time: {execution_time} seconds.Returned:{result}")
+        logging.info(f"Function {func.__name__} called with args: {args} and kwargs: {kwargs}.Execution time: {round(execution_time,3)} seconds.Returned:{result}")
         return result
+    return wrapper
+def sleep_time(func):
+    def wrapper(*args,**kwargs):
+        time.sleep(5)
+        return func(*args,**kwargs)
     return wrapper
 
 # Apply the decorator to a function
 @log_function
+@sleep_time
 def example_function(x,y):
     return x + y
 
@@ -37,6 +43,7 @@ result = example_function(100,10000)
 print(f"Result: {result}") 
 
 @log_function
+@sleep_time
 def example2(x,y):
     return x * y 
 
