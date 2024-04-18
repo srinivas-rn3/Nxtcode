@@ -26,6 +26,7 @@ def log_function(func):
         logging.info(f"Function {func.__name__} called with args: {args} and kwargs: {kwargs}.Execution time: {round(execution_time,3)} seconds.Returned:{result}")
         return result
     return wrapper
+
 def sleep_time(func):
     def wrapper(*args,**kwargs):
         time.sleep(5)
@@ -49,4 +50,4 @@ def example2(x,y):
 
 #Test the decorted function
 result1 = example2(100,90)
-print(result1)
+print(f"Result: {result1}")
