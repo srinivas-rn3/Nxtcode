@@ -24,3 +24,12 @@ if str1 == str1[::-1]:
     print("palindrome:True")
 else:
     print("palindrome:False")
+    
+#
+number = list(range(1,101))
+## Slicing the list with the expression numbers[0::9]
+#0 is the starting index, meaning the slice will start at the first element of the list.
+#9 is the step size, meaning the slice will take every 9th element from the list starting from the index 0.
+#The absence of a stop index means it will go to the end of the list.
+result = number[0::9]
+print(result)
