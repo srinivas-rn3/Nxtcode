@@ -6,6 +6,11 @@ app = Flask(__name__)
 def calc_square(num):
     squre = num ** 2
     return jsonify({'input':num, 'square': squre})
-   
-if __name__ =='__main__':
+
+@app.route('/cube/<int:num>',methods=['GET'])
+def calc_cube(num):
+    cube = num ** 3
+    return jsonify({'input':num,'cube':cube})
+
+if __name__ == '__main__':
     app.run(debug=True)
